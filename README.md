@@ -29,14 +29,27 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+`.forEAch` is an array prototype that only logs out the looping for each element of an index
+`.map` is an array prototype that actually returns defined values and push to a new array.
 
 2. What is the difference between a function and a method?
+    All methods are functions that are used with the scope of objects, while some functions are methods, but not all functions are methods.
 
 3. What is closure?
+    Javascripts is a two passes compiler, that reads from the browser twice. When functions are written, the browser will scan for the function declarations, and the second pass the browsers will pull in any reference in the outer scope that reference the function. This is why if you use variables, functions and other outside of the function and use it under that function, the code still works. This is closure, the ability for function to reference outer variables, functions, and other outside of its declartion. However it doesn't work vice versa, when functions in the outer scope reference a nested variable inside a specific functions.
 
 4. Describe the four rules of the 'this' keyword.
+ Global Objects: when this references the global/window Object
+ 
+ Implicit: whenever function is called by a preceding dot, the object preceding in the declaration is the implicit reference of the this.
 
+ Explicit: Javascript `.apply` and `.call` method is applied, the explicit, the preceding object method explicitly binded to this.
+
+ New binding: when function constructor is declared, it creates an object inside that function. When a variable is applied to that constructor, "new" is used to binded it to the declared constructor. Inside the constructor function of the object, this binds that constructor object to the declared varabile with new.
+ 
 5. Why do we need super() in an extended class?
+The super() function carries the parent class' attributes into the child class's attributes, it's the reaching out opposite of "extends" when we extends the child class constructor to the parent's class.
+
 
 ## Project Set up
 
